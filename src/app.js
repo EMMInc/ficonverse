@@ -344,10 +344,8 @@ class FacebookBot {
                 let queryKey = response.result.resolvedQuery;
                 console.log(queryKey + action + facebookId);
                 if (action === 'enrol-customer') {
-                    if (queryKey === 'yes' | queryKey === 'Yes' | queryKey === 'YES') {
-                        if (facebookId != '') {
-                            this.openEnrolCustomerPage(sender);
-                        }
+                    if (facebookId != '') {
+                        this.openEnrolCustomerPage(sender);
                     }
 
                 } else if (action === 'transfer-money') {
