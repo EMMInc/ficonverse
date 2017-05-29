@@ -635,11 +635,12 @@ class Transactions {
         request(options, function(error, response, body) {
             if (error) throw new Error(error);
             console.log("presenting body");
-            let responseMessage = body.responseMessage;
-            if (body != null) {
+            console.log(body);
+            if (body != null | body != '') {
+                let responseMessage = body.responseMessage;
                 sendTextMessage(senderId, responseMessage);
             } else {
-                sendTextMessage(senderId, "No amount has been credited into your account");
+                sendTextMessage(senderId, "No amount has been credited into your account.");
             }
         });
     }
