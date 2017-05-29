@@ -639,8 +639,12 @@ class Transactions {
             if (body != null | body != '') {
                 let responseMessage = body.responseMessage;
                 sendTextMessage(senderId, responseMessage);
-            } else {
-                sendTextMessage(senderId, "No amount has been credited into your account.");
+                if (body.Message) {
+                    let message = body.Message;
+                    if (message.indexOf("An error has occurred") > -1) {
+                        sendTextMessage(senderId, "No amount has been credited into your account.");
+                    }
+                }
             }
         });
     }
