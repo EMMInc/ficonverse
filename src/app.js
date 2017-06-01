@@ -529,11 +529,11 @@ class FacebookBot {
                     type: "template",
                     payload: {
                         template_type: "button",
-                        text: "Click the below to get onboarded.",
+                        text: "Click here for Enrollment.",
                         buttons: [{
                             type: "web_url",
                             url: APP_URL + "/onboarded/customer_onboarded.html",
-                            title: "Get Onboarded Now",
+                            title: "Get Enrolled Now",
                             webview_height_ratio: "tall"
                         }]
                     }
@@ -584,11 +584,11 @@ class FacebookBot {
                     type: "template",
                     payload: {
                         template_type: "button",
-                        text: "Click the button below to get your account balance.",
+                        text: "Click the button below to for Balance Enquiry.",
                         buttons: [{
                             type: "web_url",
                             url: APP_URL + "/balance/balance_enquiry.html",
-                            title: "Get Account Balance",
+                            title: "Click for Balance Enquiry",
                             webview_height_ratio: "tall"
                         }]
                     }
